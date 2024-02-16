@@ -72,7 +72,7 @@ locals {
 variable "control_plane_node_count" {
   description = "Number of control plane nodes"
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "control_plane_node_machine_name" {

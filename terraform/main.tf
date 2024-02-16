@@ -25,7 +25,7 @@ module "k8s" {
 
   # SSH related variables
   identity_file = var.identity_file
-  key_pair = openstack_compute_keypair_v2.k8s_keypair.name
+  key_pair = openstack_compute_keypair_v2.litter_k8s_keypair.name
   private_key = tls_private_key.k8s_key.private_key_pem
 
   # Network related variables

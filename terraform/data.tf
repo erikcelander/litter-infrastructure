@@ -20,7 +20,7 @@ resource "tls_private_key" "k8s_key" {
 }
 
 # Create an OpenStack key pair using the public key from the generated SSH key pair
-resource "openstack_compute_keypair_v2" "k8s_keypair" {
-  name       = "k8s_keypair"
+resource "openstack_compute_keypair_v2" "litter_k8s_keypair" {
+  name       = "litter_k8s_keypair"
   public_key = replace(tls_private_key.k8s_key.public_key_openssh, "\n", "")
 }
